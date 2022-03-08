@@ -29,9 +29,9 @@ export const WinningsTable: React.FC<WinningsTableProps> = (props: WinningsTable
                 <TableCell component="th" scope="row">
                   {category}
                 </TableCell>
-                <TableCell align="right" sx={{fontWeight:"bold"}}>{props.lottery.wins[index]}</TableCell>
+                <TableCell align="right" sx={{fontWeight:"bold"}}>{props.lottery.wins[index].toLocaleString()}</TableCell>
                 <TableCell align="right">{ToCurrency(props.lottery.payouts[index])}</TableCell>
-                <TableCell align="right">1 / {props.lottery.odds[index]}</TableCell>
+                <TableCell align="right">1 / {props.lottery.odds[index].toLocaleString()}</TableCell>
                 <OddsTableCell tickets={props.tickets} winningOdds={props.lottery.odds[index]} winningTickets={props.lottery.wins[index]} />
               </TableRow>
             ))}
