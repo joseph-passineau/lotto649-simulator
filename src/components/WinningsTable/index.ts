@@ -1,0 +1,1 @@
+export { WinningsTable } from "./WinningsTable";
