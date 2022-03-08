@@ -14,6 +14,6 @@ export const DateCard: React.FC<DateCardProps> = (props: DateCardProps) => {
     const date = dayjs().add(props.days, 'day');
 
     return (
-        <Typography align='right' variant="h3" my={2}>{dayjs().add(props.days, 'day').format('MMMM YYYY')}</Typography>
+        <Typography align='right' variant="h3" my={2}>{date.format('MMMM YYYY')}</Typography>
     )
 }
