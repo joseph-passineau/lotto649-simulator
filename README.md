@@ -13,10 +13,10 @@
     <img src="public/logo192.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Lotto 6/49 lotterie simulator</h3>
+  <h3 align="center">Lotto 6/49 lottery simulator</h3>
 
   <p align="center">
-    This is a lotterie simulator of the Loto-Quebec 6/49 lotterie game
+    This is a lottery simulator of the Loto-Quebec 6/49 lottery game
     <br />
     <a href="https://joseph-passineau.github.io/lotto649-simulator/"><strong>View Demo</strong></a>
     <br />
