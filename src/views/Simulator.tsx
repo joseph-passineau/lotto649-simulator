@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { Dispatch, SetStateAction, useEffect, useState } from 'react';
 import { Button, Grid, Stack } from '@mui/material';
 import { useInterval } from 'hooks/useInterval';
 import { TimePassed } from 'components/TimePassed/TimePassed';
@@ -21,6 +21,7 @@ export interface SimulatorProps {
     bankAccount: BankAccount;
     lottery: Lottery;
     reset: () => void;
+    setTicket: Dispatch<SetStateAction<Ticket>>;
 }
 
 export const Simulator: React.FC<SimulatorProps> = (props: SimulatorProps) => {
@@ -55,7 +56,7 @@ export const Simulator: React.FC<SimulatorProps> = (props: SimulatorProps) => {
           </Stack>
           <Button color="error" variant="contained" onClick={resetSimulator} endIcon={<RestartAltIcon />}>Reset</Button>
         </Stack>
-        <TicketCard ticket={props.ticket} />   
+        <TicketCard ticket={props.ticket} setTicket={props.setTicket}/>   
         <TicketPrice lottery={props.lottery}/>   
       </Grid>
       <Grid container item xs lg={9} rowGap={2} padding={2}>

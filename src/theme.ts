@@ -1,5 +1,5 @@
 import { createTheme, PaletteMode, Theme } from "@mui/material";
-import { grey } from "@mui/material/colors";
+import { grey, blue } from "@mui/material/colors";
 
 const getPaletteTheme = (mode: PaletteMode) => {
   return createTheme(
@@ -11,6 +11,9 @@ const getPaletteTheme = (mode: PaletteMode) => {
             background: {
               default: grey[50]
             },
+            blue: {
+              ...blue,
+            }
           }
           : {
             background: {
@@ -28,6 +31,22 @@ export const createAppTheme = (mode: PaletteMode): Theme => {
 
   return createTheme(
     {
-      ...paletteTheme
+      ...paletteTheme,
+      components: {
+        MuiCardHeader: {
+          styleOverrides: {
+            root: {
+              backgroundColor: blue[50]
+            }
+          }
+        },
+        MuiTableHead: {
+          styleOverrides: {
+            root: {
+                  backgroundColor: blue[50]
+            }
+          }
+        }
+      },
     });
 };
