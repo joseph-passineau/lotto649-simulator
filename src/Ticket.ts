@@ -1,7 +1,6 @@
 import { Lottery } from "Lottery";
 import { FixedLengthArray } from "types";
 
-
 export class Ticket {
     numbers: FixedLengthArray<[number,number,number,number,number,number]>;
 

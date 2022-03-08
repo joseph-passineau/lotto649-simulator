@@ -2,6 +2,7 @@ import React from 'react';
 import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
 import { Lottery } from 'Lottery';
 import { OddsTableCell } from './OddsTableCell';
+import { ToCurrency } from 'helper';
 
 export interface WinningsTableProps {
     lottery: Lottery;
@@ -29,7 +30,7 @@ export const WinningsTable: React.FC<WinningsTableProps> = (props: WinningsTable
                   {category}
                 </TableCell>
                 <TableCell align="right" sx={{fontWeight:"bold"}}>{props.lottery.wins[index]}</TableCell>
-                <TableCell align="right">{props.lottery.payouts[index].toLocaleString("en-CA",{style: 'currency', currency: 'CAD'})}</TableCell>
+                <TableCell align="right">{ToCurrency(props.lottery.payouts[index])}</TableCell>
                 <TableCell align="right">1 / {props.lottery.odds[index]}</TableCell>
                 <OddsTableCell tickets={props.tickets} winningOdds={props.lottery.odds[index]} winningTickets={props.lottery.wins[index]} />
               </TableRow>

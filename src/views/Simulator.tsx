@@ -12,6 +12,7 @@ import { WinningsTable } from 'components/WinningsTable';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import PauseIcon from '@mui/icons-material/Pause';
 import RestartAltIcon from '@mui/icons-material/RestartAlt';
+import { TicketPrice } from 'components/TicketPrice';
 
 export interface SimulatorProps {
     ticket: Ticket;
@@ -50,7 +51,8 @@ export const Simulator: React.FC<SimulatorProps> = (props: SimulatorProps) => {
           </Stack>
           <Button color="error" variant="contained" onClick={resetSimulator} endIcon={<RestartAltIcon />}>Reset</Button>
         </Stack>
-        <TicketCard ticket={props.ticket} />      
+        <TicketCard ticket={props.ticket} />   
+        <TicketPrice lottery={props.lottery}/>   
       </Grid>
       <Grid container item xs lg={9} rowGap={2} padding={2}>
         <Grid container direction="row" gap={2}>
