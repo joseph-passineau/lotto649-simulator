@@ -18,7 +18,7 @@
   <p align="center">
     This is a lotterie simulator of the Loto-Quebec 6/49 lotterie game
     <br />
-    <a href="https://github.com/joseph-passineau/lotto649-simulator"><strong>View Demo</strong></a>
+    <a href="https://joseph-passineau.github.io/lotto649-simulator/"><strong>View Demo</strong></a>
     <br />
     <br />
     <a href="https://github.com/joseph-passineau/lotto649-simulator/issues">Report Bug</a>
@@ -103,6 +103,8 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 This project was inspired by UK Lottery Simulator by The Watchful Eyes
 
 [UK Lottery Simulator](https://www.reddit.com/r/CasualUK/comments/t74tg6/uk_lottery_simulator_playing_the_lottery_1000/)
+
+###Others
 
 - [Best README Template](https://github.com/othneildrew/Best-README-Template)
 

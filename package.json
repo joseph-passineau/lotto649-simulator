@@ -19,6 +19,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build:docs": "react-scripts build && mv build docs || move build docs",
     "test": "jest"
   },
   "eslintConfig": {
