@@ -44,6 +44,11 @@ export const Simulator: React.FC<SimulatorProps> = (props: SimulatorProps) => {
     setTickets(0);
   }
 
+  const handleTicketChange = (ticket: Ticket) => {
+    resetSimulator();
+    props.setTicket(ticket); 
+  }
+
   const days = tickets*7;
 
   return (
@@ -56,7 +61,7 @@ export const Simulator: React.FC<SimulatorProps> = (props: SimulatorProps) => {
           </Stack>
           <Button color="error" variant="contained" onClick={resetSimulator} endIcon={<RestartAltIcon />}>Reset</Button>
         </Stack>
-        <TicketCard ticket={props.ticket} setTicket={props.setTicket}/>   
+        <TicketCard ticket={props.ticket} onTicketChange={handleTicketChange}/>   
         <TicketPrice lottery={props.lottery}/>   
       </Grid>
       <Grid container item xs lg={9} rowGap={2} padding={2}>

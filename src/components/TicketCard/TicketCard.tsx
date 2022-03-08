@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction } from 'react';
+import React from 'react';
 import { Card, CardContent, CardHeader, Divider, IconButton, Stack } from '@mui/material';
 import { Ticket } from 'Ticket';
 import { TicketCardNumber } from './TicketCardNumber';
@@ -8,7 +8,7 @@ import { FixedLengthArray } from 'types';
 
 export interface TicketCardProps {
     ticket: Ticket;
-    setTicket: Dispatch<SetStateAction<Ticket>>;
+    onTicketChange: (ticket: Ticket) => void;
 }
 
 export const TicketCard: React.FC<TicketCardProps> = (props: TicketCardProps) => {
@@ -24,7 +24,7 @@ export const TicketCard: React.FC<TicketCardProps> = (props: TicketCardProps) =>
     };
 
     const handleSave = (numbers: FixedLengthArray<[number,number,number,number,number,number]>) => {
-        props.setTicket(new Ticket(numbers));
+        props.onTicketChange(new Ticket(numbers));
     }
 
     return (
