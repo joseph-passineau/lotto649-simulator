@@ -55,7 +55,7 @@ export const Simulator: React.FC<SimulatorProps> = (props: SimulatorProps) => {
       <Grid container item xs lg={9} rowGap={2} padding={2}>
         <Grid container direction="row" gap={2}>
           <Grid direction="column" justifyContent="space-between" container item xs gap={2}>
-              <WinningDraw draw={props.lottery.result} />
+              <WinningDraw draw={props.lottery.result} ticket={props.ticket} />
               <EarningStats balance={props.bankAccount.balance} totalEarning={props.lottery.totalWinnings} totalSpending={tickets * props.lottery.ticketPrice} />
           </Grid>
           <Grid item xs>
