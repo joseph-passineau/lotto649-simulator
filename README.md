@@ -100,11 +100,10 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Acknowledgments
 
-This project was inspired by UK Lottery Simulator by The Watchful Eyes
-
+This project was inspired by UK Lottery Simulator by The Watchful Eyes\
 [UK Lottery Simulator](https://www.reddit.com/r/CasualUK/comments/t74tg6/uk_lottery_simulator_playing_the_lottery_1000/)
 
-###Others
+### Others
 
 - [Best README Template](https://github.com/othneildrew/Best-README-Template)
 
