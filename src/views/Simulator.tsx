@@ -26,34 +26,34 @@ export interface SimulatorProps {
 
 export const Simulator: React.FC<SimulatorProps> = (props: SimulatorProps) => {
   const [tickets, setTickets] = useState(0);
-  const { start, stop, isRunning } = useInterval({callBack: () => setTickets(x => x + 1), ms: 1 });
+  const { start, stop, isRunning } = useInterval({ callBack: () => setTickets(x => x + 1), ms: 1 });
 
   useEffect(() => {
-    if(tickets > 0) {
-      props.bankAccount.Withdraw(props.lottery.ticketPrice);
+    if (tickets > 0) {
+      props.bankAccount.withdraw(props.lottery.ticketPrice);
       props.lottery.draw();
 
-      var winnings = props.lottery.validateTicket(props.ticket);
-      props.bankAccount.Deposit(winnings);
+      const winnings = props.lottery.validateTicket(props.ticket);
+      props.bankAccount.deposit(winnings);
     }
-  },[props.bankAccount, props.lottery, props.ticket, tickets])
+  }, [props.bankAccount, props.lottery, props.ticket, tickets]);
 
   const resetSimulator = () => {
     stop();
     props.reset();
     setTickets(0);
-  }
+  };
 
   const handleTicketChange = (ticket: Ticket) => {
     resetSimulator();
-    props.setTicket(ticket); 
-  }
+    props.setTicket(ticket);
+  };
 
-  const days = tickets*7;
+  const days = tickets * 7;
 
   return (
     <Grid container direction="row">
-      <Grid item xs lg={3} sx={{backgroundColor: "grey.200"}} padding={2}>
+      <Grid item xs lg={3} sx={{ backgroundColor: 'grey.200' }} padding={2}>
         <Stack direction="row" marginY={2} justifyContent="space-between">
           <Stack direction="row" gap={2}>
             <Button variant="contained" onClick={start} disabled={isRunning} endIcon={<PlayArrowIcon />}>Play</Button>
@@ -61,8 +61,8 @@ export const Simulator: React.FC<SimulatorProps> = (props: SimulatorProps) => {
           </Stack>
           <Button color="error" variant="contained" onClick={resetSimulator} endIcon={<RestartAltIcon />}>Reset</Button>
         </Stack>
-        <TicketCard ticket={props.ticket} onTicketChange={handleTicketChange}/>   
-        <TicketPrice lottery={props.lottery}/>   
+        <TicketCard ticket={props.ticket} onTicketChange={handleTicketChange}/>
+        <TicketPrice lottery={props.lottery}/>
       </Grid>
       <Grid container item xs lg={9} rowGap={2} padding={2}>
         <Grid container direction="row" gap={2}>
@@ -73,7 +73,7 @@ export const Simulator: React.FC<SimulatorProps> = (props: SimulatorProps) => {
           </Grid>
           <Grid item xs>
             <DateCard days={days} />
-            <TimePassed days={days} />    
+            <TimePassed days={days} />
           </Grid>
         </Grid>
         <Grid item xs>
@@ -81,5 +81,5 @@ export const Simulator: React.FC<SimulatorProps> = (props: SimulatorProps) => {
         </Grid>
       </Grid>
     </Grid>
-  )
-}
+  );
+};

@@ -9,9 +9,8 @@ interface PageLayoutProps {
 }
 
 export const PageLayout: React.FC<PageLayoutProps> = ({ children }: PageLayoutProps) => {
-
   return (
-    <Box sx={{minHeight:'100vh', display:'flex', flexDirection:'column'}}>
+    <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       <AppBar position="relative">
         <Toolbar>
           <Stack direction="row" gap={2} alignItems="center">

@@ -1,1 +1,1 @@
-export { TicketCounter } from "./TicketCounter";
+export { TicketCounter } from './TicketCounter';

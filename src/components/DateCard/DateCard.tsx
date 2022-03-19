@@ -1,5 +1,5 @@
 import React from 'react';
-import {Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 import dayjs from 'dayjs';
 import localizedFormat from 'dayjs/plugin/localizedFormat';
 
@@ -10,10 +10,9 @@ export interface DateCardProps {
 }
 
 export const DateCard: React.FC<DateCardProps> = (props: DateCardProps) => {
+  const date = dayjs().add(props.days, 'day');
 
-    const date = dayjs().add(props.days, 'day');
-
-    return (
+  return (
         <Typography align='right' variant="h3" my={2}>{date.format('MMMM YYYY')}</Typography>
-    )
-}
+  );
+};

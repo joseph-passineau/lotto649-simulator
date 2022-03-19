@@ -1,1 +1,1 @@
-export { WinningDraw } from "./WinningDraw";
+export { WinningDraw } from './WinningDraw';

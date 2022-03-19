@@ -12,25 +12,24 @@ export interface TicketCardProps {
 }
 
 export const TicketCard: React.FC<TicketCardProps> = (props: TicketCardProps) => {
+  const [openDialog, setOpenDialog] = React.useState(false);
 
-    const [openDialog, setOpenDialog] = React.useState(false);
+  const handleClickOpen = () => {
+    setOpenDialog(true);
+  };
 
-    const handleClickOpen = () => {
-        setOpenDialog(true);
-    };
-    
-    const handleClose = () => {
-        setOpenDialog(false);
-    };
+  const handleClose = () => {
+    setOpenDialog(false);
+  };
 
-    const handleSave = (numbers: FixedLengthArray<[number,number,number,number,number,number]>) => {
-        props.onTicketChange(new Ticket(numbers));
-    }
+  const handleSave = (numbers: FixedLengthArray<[number, number, number, number, number, number]>) => {
+    props.onTicketChange(new Ticket(numbers));
+  };
 
-    return (
+  return (
         <Card>
-            <CardHeader 
-            title="Your numbers" 
+            <CardHeader
+            title="Your numbers"
             action={
                 <IconButton color="primary" onClick={handleClickOpen}>
                     <EditIcon />
@@ -47,5 +46,5 @@ export const TicketCard: React.FC<TicketCardProps> = (props: TicketCardProps) =>
             </CardContent>
             <PickTicketDialog open={openDialog} onClose={handleClose} save={handleSave} />
         </Card>
-    )
-}
+  );
+};

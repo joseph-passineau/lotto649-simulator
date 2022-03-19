@@ -6,8 +6,7 @@ export interface TicketCounterProps {
 }
 
 export const TicketCounter: React.FC<TicketCounterProps> = (props: TicketCounterProps) => {
-
-    return (
+  return (
     <Card>
         <CardHeader title="Ticket counter" />
         <Divider />
@@ -17,5 +16,5 @@ export const TicketCounter: React.FC<TicketCounterProps> = (props: TicketCounter
             </Stack>
         </CardContent>
     </Card>
-    )
-}
+  );
+};

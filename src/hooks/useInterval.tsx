@@ -12,28 +12,23 @@ export interface useIntervalProps {
 }
 
 export const useInterval = (props: useIntervalProps) : Output => {
+  const [timer, setTimer] = useState<NodeJS.Timer|null>(null);
+  const isRunning = timer != null;
 
-    const [timer, setTimer] = useState<NodeJS.Timer|null>(null);
-    const isRunning = timer != null;
-
-    const start = () =>
-    { 
-        if (!isRunning)
-        {
-            setTimer(setInterval(props.callBack, props.ms))
-        }       
+  const start = () => {
+    if (!isRunning) {
+      setTimer(setInterval(props.callBack, props.ms));
     }
+  };
 
-    const stop = () =>
-    { 
-        if (isRunning) {
-            clearInterval(timer);
-            setTimer(null);
-        }   
+  const stop = () => {
+    if (isRunning) {
+      clearInterval(timer);
+      setTimer(null);
     }
-    
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    useEffect(() => stop, [])
+  };
 
-    return { start, stop, isRunning };
-}
+  useEffect(() => stop, []);
+
+  return { start, stop, isRunning };
+};

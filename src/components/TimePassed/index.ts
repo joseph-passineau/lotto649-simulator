@@ -1,1 +1,1 @@
-export { TimePassed } from "./TimePassed";
+export { TimePassed } from './TimePassed';

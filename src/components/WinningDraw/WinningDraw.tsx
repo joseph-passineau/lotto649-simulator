@@ -11,17 +11,17 @@ export interface WinningDrawProps {
 }
 
 export const WinningDraw: React.FC<WinningDrawProps> = (props: WinningDrawProps) => {
-
-    return (
+  return (
     <Card>
         <CardHeader title="Winning draw" />
         <Divider />
         <CardContent>
-        {props.draw ? (
+        {props.draw
+          ? (
             <Stack direction="row" gap={2} flexWrap="wrap">
                 <Stack direction="row" gap={2} alignItems="center">
                     {sortBy(props.draw.numbers).map((number) => (
-                        <WinningDrawNumber number={number} isWinner={props.ticket.numbers.includes(number)} />
+                        <WinningDrawNumber key={number} number={number} isWinner={props.ticket.numbers.includes(number)} />
                     ))}
                 </Stack>
                 <Stack direction="row" gap={2} alignItems="center">
@@ -29,10 +29,11 @@ export const WinningDraw: React.FC<WinningDrawProps> = (props: WinningDrawProps)
                     <WinningDrawNumber number={props.draw.bonus} isWinner={props.ticket.numbers.includes(props.draw.bonus)}/>
                 </Stack>
             </Stack>
-        ):(
+            )
+          : (
             <Typography variant='body1'>Start simulation to draw</Typography>
-        )}
+            )}
         </CardContent>
     </Card>
-    )
-}
+  );
+};

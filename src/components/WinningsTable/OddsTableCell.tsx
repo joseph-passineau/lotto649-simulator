@@ -1,5 +1,5 @@
 import React from 'react';
-import { EpsilonRound } from 'helper';
+import { epsilonRound } from 'helper';
 import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
 import ArrowDropDown from '@mui/icons-material/ArrowDropDown';
 import MinimizeIcon from '@mui/icons-material/Minimize';
@@ -12,24 +12,27 @@ export interface OddsTableCellProps {
 }
 
 export const OddsTableCell: React.FC<OddsTableCellProps> = (props: OddsTableCellProps) => {
+  const ratio = props.tickets / props.winningTickets;
+  const isTrendingDown = ratio > props.winningOdds;
 
-    const ratio = props.tickets/props.winningTickets;
-    const isTrendingDown = ratio > props.winningOdds;
-
-    return (
+  return (
         <TableCell align="right">
-            {isNaN(ratio) || !isFinite(ratio) ? (
+            {isNaN(ratio) || !isFinite(ratio)
+              ? (
                 <MinimizeIcon />
-            ): (
+                )
+              : (
                 <Stack direction="row" justifyContent="flex-end" gap={2}>
-                    <Typography sx={{fontWeight:"bold"}} color={isTrendingDown ? "red" : "green"}>1 / {EpsilonRound(ratio).toFixed(1)}</Typography>
-                    {isTrendingDown ? (
+                    <Typography sx={{ fontWeight: 'bold' }} color={isTrendingDown ? 'red' : 'green'}>1 / {epsilonRound(ratio).toFixed(1)}</Typography>
+                    {isTrendingDown
+                      ? (
                         <ArrowDropDown color="error" />
-                    ): (
+                        )
+                      : (
                         <ArrowDropUpIcon color="success" />
-                    )}
+                        )}
                 </Stack>
-            )}
+                )}
         </TableCell>
-    );
-}
+  );
+};

@@ -1,1 +1,1 @@
-export { EarningStats } from "./EarningStats";
+export { EarningStats } from './EarningStats';

@@ -1,15 +1,15 @@
 export class BankAccount {
-    balance: number;
+  balance: number;
 
-    constructor() {
-        this.balance = 0;
-    }
+  constructor () {
+    this.balance = 0;
+  }
 
-    Withdraw(amount: number) {
-        this.balance -= amount;
-    }
+  withdraw (amount: number) {
+    this.balance -= amount;
+  }
 
-    Deposit(amount: number) {
-        this.balance += amount;
-    }
+  deposit (amount: number) {
+    this.balance += amount;
+  }
 }

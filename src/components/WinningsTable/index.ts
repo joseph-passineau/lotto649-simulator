@@ -1,1 +1,1 @@
-export { WinningsTable } from "./WinningsTable";
+export { WinningsTable } from './WinningsTable';
