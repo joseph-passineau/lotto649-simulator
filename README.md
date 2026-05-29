@@ -40,10 +40,10 @@
 
 ### Built With
 
-- [React](https://react.dev/) 19
-- [Vite](https://vite.dev/) 8
+- [React 19](https://react.dev/)
+- [Vite](https://vite.dev/)
 - [TypeScript](https://www.typescriptlang.org/)
-- [Tailwind CSS](https://tailwindcss.com/) 4
+- [Tailwind CSS](https://tailwindcss.com/)
 - [Chart.js](https://www.chartjs.org/) / [react-chartjs-2](https://react-chartjs-2.js.org/)
 - [Vitest](https://vitest.dev/)
 - [i18next](https://www.i18next.com/) / [react-i18next](https://react.i18next.com/)
