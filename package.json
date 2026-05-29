@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "test": "vitest",
     "test:run": "vitest run",
-    "i18n:parse": "i18next \"src/**/*.{ts,tsx}\" -c i18next-parser.config.cjs",
+    "i18n:parse": "i18next-cli extract",
     "pwa:assets": "pwa-assets-generator"
   },
   "dependencies": {
@@ -40,7 +40,7 @@
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17.6.0",
-    "i18next-parser": "^9.0.2",
+    "i18next-cli": "^1.58.1",
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.59.2",
     "vite": "^8.0.12",
