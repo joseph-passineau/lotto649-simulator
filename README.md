@@ -10,7 +10,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/joseph-passineau/lotto649-simulator">
-    <img src="public/logo192.png" alt="Logo" width="80" height="80">
+    <img src="public/pwa-192x192.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Lotto 6/49 lottery simulator</h3>
@@ -18,7 +18,7 @@
   <p align="center">
     This is a lottery simulator of the Loto-Quebec 6/49 lottery game
     <br />
-    <a href="https://joseph-passineau.github.io/lotto649-simulator/"><strong>View Demo</strong></a>
+    <a href="https://lotto649.passineau.ca/"><strong>View Demo</strong></a>
     <br />
     <br />
     <a href="https://github.com/joseph-passineau/lotto649-simulator/issues">Report Bug</a>
