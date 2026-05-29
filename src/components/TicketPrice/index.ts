@@ -1,1 +1,0 @@
-export { TicketPrice } from './TicketPrice';

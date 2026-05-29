@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Lotto 6/49">
+  <rect width="512" height="512" rx="96" fill="#f59e0b"/>
+  <text
+    x="256"
+    y="325"
+    text-anchor="middle"
+    font-family="system-ui, Segoe UI, sans-serif"
+    font-size="164"
+    font-weight="800"
+    fill="#1a0900"
+  >6/49</text>
+</svg>

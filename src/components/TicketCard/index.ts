@@ -1,1 +1,0 @@
-export { TicketCard } from './TicketCard';

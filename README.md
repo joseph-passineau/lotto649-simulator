@@ -40,10 +40,14 @@
 
 ### Built With
 
-This application is built using the following frameworks/libraries.
-
-- [React.js](https://reactjs.org/)
-- [Material UI](https://mui.com/)
+- [React](https://react.dev/) 19
+- [Vite](https://vite.dev/) 8
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/) 4
+- [Chart.js](https://www.chartjs.org/) / [react-chartjs-2](https://react-chartjs-2.js.org/)
+- [Vitest](https://vitest.dev/)
+- [i18next](https://www.i18next.com/) / [react-i18next](https://react.i18next.com/)
+- [vite-plugin-pwa](https://vite-pwa-org.netlify.app/) (offline installable app)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -51,42 +55,49 @@ This application is built using the following frameworks/libraries.
 
 ## Getting Started
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Prerequisites
 
-### Start
+- [Node.js](https://nodejs.org/) 20+ (LTS recommended)
+- npm (comes with Node)
+
+### Install
 
 ```sh
-npm start
+git clone <repository-url>
+cd lotto649-simulator
+npm install
 ```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Development
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```sh
+npm run dev
+```
+
+Open the URL shown in the terminal (default [http://localhost:5173](http://localhost:5173)).
 
 ### Test
 
 ```sh
-npm test
+npm run test:run
 ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### Build
+### Production build
 
 ```sh
 npm run build
+npm run preview
 ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+`npm run preview` serves the `dist/` folder locally so you can smoke-test the production build and PWA.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Optional: regenerate PWA icons
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+After changing `public/favicon.svg`:
+
+```sh
+npm run pwa:assets
+```
 
 <!-- LICENSE -->
 
